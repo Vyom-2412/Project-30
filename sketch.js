@@ -1,4 +1,3 @@
-
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -70,7 +69,7 @@ function setup() {
   ball = Bodies.circle(50,200,20);
   World.add(world,ball);
 
-  slingShot = new SlingShot(this.ball,{x:200,y:200});
+  slingShot = new Slingshot(this.ball,{x:200,y:200});
 
 }
 
@@ -148,10 +147,4 @@ function mouseDragged(){
 
 function mouseReleased(){
   slingShot.fly();
-}
-
-function keyPressed(){
-  if(keyCode === 32){
-      slingShot.attach(this.ball);
-  }
 }
